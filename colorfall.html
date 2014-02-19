@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}">
 <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="http://static.tumblr.com/fpifyru/VCxlv9xwi/writecapture.js"></script>
+    <script src="http://static.tumblr.com/fpifyru/AKFlv9zdu/embedgist.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width">
@@ -26,8 +29,11 @@
     <!-- DEFAULT COLOR -->
     <meta name="color:MainColor" content="#C85643"/>
 
+    <!-- SECONDARY COLOR -->
+    <meta name="color:SecondaryColor" content="00929F" />
+
     <!-- TEXT COLOR -->
-    <meta name="color:TextColor" content="333" />
+    <meta name="color:TextColor" content="#333" />
 
     <!-- Social -->
     <meta name="text:Twitter Username" content=""/>
@@ -46,16 +52,16 @@
     <style type="text/css">
         .box-border{-moz-box-sizing:border-box;box-sizing:border-box;webkit-box-sizing:border-box;}
         .ninja{display:none;}
-        h1,h2,h3,h4,h5{font-family:Quicksand, Sans-Serif;margin-top:0;}
+        h1,h2,h3,h4,h5{font-family:Open Sans, Sans-Serif;margin-top:0;}
         h1{font-size:36px;line-height:48px;margin-bottom:50px;text-align:center;}
         h2{font-size:32px;}
         h2,h3,h4{line-height:28px;margin-bottom:33px;}
         p{font-size:16px;line-height:24px;margin:0 0 35px;}
         a{color:{color:TextColor};text-decoration:none;}
-        a:hover{color:{color:MainColor};text-decoration:none;}
-        body{color:#4f555b;margin:40px 0;}
+        a:hover{color:{color:SecondaryColor};text-decoration:none;}
+        body{color:#4f555b;margin:40px 0; background-color: #fafafa;}
         body header #portrait{-moz-border-radius:128px;-webkit-border-radius:128px;border-radius:128px;display:block;margin:0 auto 20px;}
-        body header #logo{font-family:Quicksand, Sans-Serif;margin-bottom:20px;}
+        body header #logo{font-family:Open Sans, Sans-Serif;margin-bottom:20px;}
         body header .description{margin:0 0 15px;text-align:center;}
         body header #nav{list-style:none;margin:0;padding:0;}
         body header #nav li{display:block;margin:0 0 10px;}
@@ -75,13 +81,13 @@
         body .content .cover{background:{color:MainColor};display:block;height:1px;position:relative;width:10px;z-index:1;}
         body .content .cover.top{top:1px;}
         body .content .cover.bottom{top:-41px;}
-        body .content .post{-moz-box-sizing:border-box;border-color:#d4d4d4;border-style:solid;border-width:1px 1px 1px 0;box-sizing:border-box;margin:0 0 40px;overflow:hidden;padding:40px 40px 40px 50px;position:relative;webkit-box-sizing:border-box;}
+        body .content .post{-moz-box-sizing:border-box;border-color:#d4d4d4;border-style:solid;border-width:1px 1px 1px 0;box-sizing:border-box;margin:0 0 40px;overflow:hidden;padding:40px 40px 40px 50px;position:relative;webkit-box-sizing:border-box; background-color: #fff;}
         body .content .post .left-bar{background:{color:MainColor};display:block;height:105%;left:0;position:absolute;top:-1px;width:10px;}
         body .content .post .date{padding:0 100px 0 0;}
         body .content .post .date p{font-size:12px;letter-spacing:2px;opacity:0.5;}
         body .content .post .text ul,body .content .post .text ol{font-size:16px;margin-bottom:35px;}
-        body .content .post .text blockquote{font-family:Quicksand, Sans-Serif;font-size:20px;font-style:italic;}
-        body .content .post .quote blockquote{border:none;font-family:Quicksand, Sans-Serif;font-size:36px;font-style:italic;line-height:48px;margin-bottom:50px;padding:0;}
+        body .content .post .text blockquote{font-family:Open Sans, Sans-Serif;font-size:20px;font-style:italic;}
+        body .content .post .quote blockquote{border:none;font-family:Open Sans, Sans-Serif;font-size:36px;font-style:italic;line-height:48px;margin-bottom:50px;padding:0;}
         body .content .post .link h3 i{font-size:13px;margin:0 0 0 10px;opacity:0.5;position:relative;top:-2px;}
         body .content .post .audio img{-moz-box-sizing:border-box;border-color:#d4d4d4;border-style:solid;border-width:1px;box-sizing:border-box;margin:0 0 20px;padding:5px;webkit-box-sizing:border-box;width:100%;}
         body .content .post .audio .track-details h1{margin:0 0 10px;text-align:left;}
@@ -209,38 +215,58 @@
                         <article class="post {TagsAsClasses}">
                             <span class="left-bar"></span>
                             {block:Date}
-                                <ul class="like-reblog">
-                                    <li>{ReblogButton color="grey" size="14"}</li>
-                                    <li>{LikeButton color="grey" size="14"}</li>
-                                </ul> 
-                                <div class="date">
-                                    {block:NewDayDate}<p>{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</p>{/block:NewDayDate}
-                                    {block:SameDayDate}<p>{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</p>{/block:SameDayDate}
-                                </div>
                             {/block:Date}
                             {block:Text}
                             <div class="text">
                                 {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
                                 {Body}
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Text}
                             {block:Quote}
                             <div class="quote">
                                 <blockquote class="words {Length}">&#8220;{Quote}&#8221;</blockquote>
                                 {block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Quote}
                             {block:Link}
                             <div class="link">
                                 <h3><a href="{URL}" {Target}>{Name}</a><i class="icon-external-link"></i></h3>
                                 {block:Description}<div class="caption">{Description}</div>{/block:Description}
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Link}
                             {block:Video}
                             <div class="video">
                                 {Video-500}
                                 {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Video}
                             {block:Audio}
                             <div class="audio">
@@ -256,12 +282,26 @@
                                 {AudioPlayerGrey}
                                 {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Audio}
                             {block:Photo}
                             <div class="photo">
                                     {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
-                                    {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                                    {block:Caption}<div class="caption"><a href="{Permalink}">{Caption}</a></div>{/block:Caption}
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Photo}
                             {block:Photoset}
                             <div class="photoset">
@@ -269,8 +309,15 @@
                                     <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
                                     {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
                                 {/block:Photos}
-                                {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                                {block:Caption}<div class="caption"><a href="{Permalink}">{Caption}</a></div>{/block:Caption}
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Photoset}
 
                             {block:Panorama}
@@ -278,11 +325,18 @@
                                 {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
                                 {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Panorama}
 
                             {block:Chat}
                             <div class="chat">
-                                {block:Title}<h2>{Title}</h2>{/block:Title}
+                                {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
                                 <ul class="conversation">
                                     {block:Lines}
                                     <li class="line {Alt}">
@@ -292,6 +346,13 @@
                                     {/block:Lines}
                                 </ul>
                             </div>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                                </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
                             {/block:Chat}
                             {block:Answer}
                             <div class="answer">
@@ -299,31 +360,16 @@
                                 <h3>{Question}</h3>
                                 <p>{Answer}</p>
                             </div>
-                            {/block:Answer}
-                            {block:IndexPage}<p class="permalink"><i class="icon-link"></i><a href="{Permalink}" class="permalink">{lang:Permalink}</a></p>{/block:IndexPage}
-                            {block:NoteCount} 
-                            <div class="note-count">
-                                <i class="icon-file-text"></i><a href="{Permalink}">{NoteCountWithLabel}</a>
-                            </div>
-                            {/block:NoteCount}
-                            {block:HasTags} 
-                            <div class="tags group">
-                                <i class="icon-tags"></i>
-                                <ul>
-                                    {block:Tags}
-                                    <li>
-                                        <a href="{TagURL}">{Tag}</a>
-                                    </li>
-                                    {/block:Tags}
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
                                 </ul>
-                            </div>
-                            {/block:HasTags}
-                            {block:PostNotes}
-                                <div class="post-notes">
-                                    <h2>Notes</h2>
-                                    {PostNotes-64}
-                                </div>  
-                            {/block:PostNotes}
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                                </div>
+                            {/block:Answer}
+                            {block:IndexPage}
+                            {/block:IndexPage}
                         </article>
                         <span class="cover bottom"></span>
                         {/block:Posts}                  
