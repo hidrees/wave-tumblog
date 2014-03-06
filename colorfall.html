@@ -59,6 +59,51 @@
         p{font-size:16px;line-height:24px;margin:0 0 35px;}
         a{color:{color:TextColor};text-decoration:none;}
         a:hover{color:{color:SecondaryColor};text-decoration:none;}
+        .author{
+            margin: 10px auto;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            width: 600px;
+            line-height: 20px;
+        }
+
+        .author span {
+            margin-left: 20px;
+        }
+
+        .author .authorportrait{
+            width: 10%;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .author .authorportrait img {
+            height: 64px;
+            width: 64px;
+            border-color: #fff;
+        }
+
+        .author .postedby {
+            text-transform: uppercase;
+            color: #bbb;
+            font-size: 12px;
+        }
+
+        .author .authorabout {
+            color: #9AB2C0;
+        }
+
+        .author .authorname {
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .author .postedby, .authorabout, .authorname{
+            float: left;
+            font-family: "Open Sans";
+        }
+
         body{color:#4f555b;margin:40px 0; background-color: #fafafa;}
         body header #portrait{-moz-border-radius:128px;-webkit-border-radius:128px;border-radius:128px;display:block;margin:0 auto 20px;}
         body header #logo{font-family:Open Sans, Sans-Serif;margin-bottom:20px;}
@@ -81,7 +126,7 @@
         body .content .cover{background:{color:MainColor};display:block;height:1px;position:relative;width:10px;z-index:1;}
         body .content .cover.top{top:1px;}
         body .content .cover.bottom{top:-41px;}
-        body .content .post{-moz-box-sizing:border-box;border-color:#d4d4d4;border-style:solid;border-width:1px 1px 1px 0;box-sizing:border-box;margin:0 0 40px;overflow:hidden;padding:40px 40px 40px 50px;position:relative;webkit-box-sizing:border-box; background-color: #fff;}
+        body .content .post{-moz-box-sizing:border-box;border-color:#d4d4d4;border-style:solid;border-width:1px 1px 1px 0;box-sizing:border-box;margin:0 0 40px;overflow:hidden;padding:40px 40px 10px 50px;position:relative;webkit-box-sizing:border-box; background-color: #fff;}
         body .content .post .left-bar{background:{color:MainColor};display:block;height:105%;left:0;position:absolute;top:-1px;width:10px;}
         body .content .post .date{padding:0 100px 0 0;}
         body .content .post .date p{font-size:12px;letter-spacing:2px;opacity:0.5;}
@@ -214,6 +259,13 @@
                         <span class="cover top"></span>
                         <article class="post {TagsAsClasses}">
                             <span class="left-bar"></span>
+                            <ul class="like-reblog">
+                                    <li>{ReblogButton color="grey" size="14"}</li>
+                                    <li>{LikeButton color="grey" size="14"}</li>
+                            </ul>
+                            <div class="date">
+                                    <p>{TimeAgo}</p>
+                            </div>
                             {block:Date}
                             {/block:Date}
                             {block:Text}
@@ -221,13 +273,6 @@
                                 {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
                                 {Body}
                             </div>
-                            <ul class="like-reblog">
-                                    <li>{ReblogButton color="grey" size="14"}</li>
-                                    <li>{LikeButton color="grey" size="14"}</li>
-                                </ul>
-                            <div class="date">
-                                    <p>{TimeAgo}</p>
-                                </div>
                             {/block:Text}
                             {block:Quote}
                             <div class="quote">
