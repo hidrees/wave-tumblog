@@ -18,13 +18,13 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     
     <!-- Bootstrap 3.x -->
-    <link rel="stylesheet" href="http://static.tumblr.com/jzbig4d/PtYmsxfr9/bootstrap.min.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/y15pkjg/q8Cn21fi6/bootstrap.min.css">
 
     <!-- FontAwesome -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
     <!-- media.css -->
-    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/jzbig4d/XXxmt55jk/media.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/y15pkjg/1dsn21g4h/media.css">
 
     <!-- DEFAULT COLOR -->
     <meta name="color:MainColor" content="#C85643"/>
@@ -104,7 +104,7 @@
             font-family: "Open Sans";
         }
 
-        body{color:#4f555b;margin:40px 0; background-color: #fafafa;}
+        body{color:#4f555b;margin:40px 0; background-color: #E6E6E6;}
         body header #portrait{-moz-border-radius:128px;-webkit-border-radius:128px;border-radius:128px;display:block;margin:0 auto 20px;}
         body header #logo{font-family:Open Sans, Sans-Serif;margin-bottom:20px;}
         body header .description{margin:0 0 15px;text-align:center;}
@@ -123,11 +123,10 @@
         body header .social-icons ul li:last-child{padding:0;}
         body header .social-icons ul li a{color:#4f555b;display:block;opacity:0.8;text-align:center;}
         body header .social-icons ul li a:hover{color:{color:MainColor};opacity:1;text-decoration:none;}
-        body .content .cover{background:{color:MainColor};display:block;height:1px;position:relative;width:10px;z-index:1;}
+        body .content .cover{display:block;height:1px;position:relative;width:10px;z-index:1;}
         body .content .cover.top{top:1px;}
         body .content .cover.bottom{top:-41px;}
-        body .content .post{-moz-box-sizing:border-box;border-color:#d4d4d4;border-style:solid;border-width:1px 1px 1px 0;box-sizing:border-box;margin:0 0 40px;overflow:hidden;padding:40px 40px 10px 50px;position:relative;webkit-box-sizing:border-box; background-color: #fff;}
-        body .content .post .left-bar{background:{color:MainColor};display:block;height:105%;left:0;position:absolute;top:-1px;width:10px;}
+        body .content .post{-moz-box-sizing:border-box;box-sizing:border-box;margin:0 0 40px;overflow:hidden;padding:40px 40px 10px 50px;position:relative;webkit-box-sizing:border-box; background-color: #fff;border-radius: 4px;}
         body .content .post .date{padding:0 100px 0 0;}
         body .content .post .date p{font-size:12px;letter-spacing:2px;opacity:0.5;}
         body .content .post .text ul,body .content .post .text ol{font-size:16px;margin-bottom:35px;}
@@ -164,8 +163,8 @@
         body .content .post .post-notes .notes li a img{-moz-border-radius:32px;-webkit-border-radius:32px;border-radius:32px;float:left;height:32px;margin:0 10px 0 0;width:32px;}
         body .content .post .post-notes .notes li .action{position:relative;top:2px;}
         body .pagination{display:block;margin:20px;}
-        body .pagination a{color:#4f555b;font-size:20px;opacity:0.2;}
-        body .pagination a:hover{color:{color:MainColor};opacity:1;text-decoration:none;}
+        body .pagination a{color:#444;font-size:20px;opacity:0.2;}
+        body .pagination a:hover{color:#02919E;opacity:1;text-decoration:none;}
         body footer{font-size:12px;opacity:0.5;text-align:center;}
         body footer .icon-tumblr{display:block;margin:0 0 10px;text-align:center;}
         body .spotify_audio_player{height:80px!important;}
@@ -258,7 +257,6 @@
                         {block:Posts}
                         <span class="cover top"></span>
                         <article class="post {TagsAsClasses}">
-                            <span class="left-bar"></span>
                             <ul class="like-reblog">
                                     <li>{ReblogButton color="grey" size="14"}</li>
                                     <li>{LikeButton color="grey" size="14"}</li>
@@ -273,13 +271,6 @@
                                 {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
                                 {Body}
                             </div>
-                            <ul class="like-reblog">
-                                    <li>{ReblogButton color="grey" size="14"}</li>
-                                    <li>{LikeButton color="grey" size="14"}</li>
-                                </ul>
-                            <div class="date">
-                                    <p>{TimeAgo}</p>
-                                </div>
                             {/block:Text}
                             {block:Quote}
                             <div class="quote">

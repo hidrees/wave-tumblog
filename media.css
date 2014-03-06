@@ -1,0 +1,64 @@
+@media (max-width: 480px) {
+  body .container {
+    padding: 0;
+  }
+  body .container header #portrait {
+    width: 25%;
+  }
+  body .container header.affix {
+    position: relative;
+  }
+  body .container .content .col-sm-8 {
+    padding: 0;
+  }
+  body .container .content .col-sm-8 .post {
+    padding: 40px 15px 40px 25px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  body .container .content .col-sm-8 .post .quote blockquote {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 767px) {
+  body .container header.affix {
+    position: relative;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  body header #portrait {
+    width: 25%;
+  }
+  body header.affix {
+    width: 210px;
+  }
+}
+@media (max-width: 979px) {
+  .author .authorabout {
+    width: 50%;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 991px) {
+  .author .authorabout {
+    width: 50%;
+  }
+  body header.affix {
+    width: 210px;
+  }
+}
+@media (min-width: 980px) {
+  body header #portrait {
+    width: 35%;
+  }
+  body header.affix {
+    width: 210px;
+  }
+}
+@media (min-width: 1200px) {
+  body header.affix {
+    width: 350px;
+  }
+}
