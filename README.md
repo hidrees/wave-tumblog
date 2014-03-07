@@ -6,7 +6,7 @@ Tumblog theme for Waveapps engineering blog
 ## Instructions
 
 
-1. This is what you have to add in the HTML for the “Posted by” section to appear at the bottom of the post. This has to be added after your posts content
+1. This is what you have to add in the HTML for the “Posted by” section to appear at the bottom of the post. This has to be added after your post's content
 
                 <div class="author">
                     <div class="authorportrait"><img src="https://sample-photo-url.jpg" /></div>
@@ -17,7 +17,7 @@ Tumblog theme for Waveapps engineering blog
                     <div class="authorabout">Author About</div>
                 </div>
 
-2. While the theme does not show notes for the posts, we should add relevant ones when posting fresh posts anyway because they help with search, both on the blog and when someone searches for those keywords on Google etc.
+2. While the theme does not display notes for posts, we add relevant ones when posting fresh posts anyway to help index them in search.
 
 
 ## TODO
