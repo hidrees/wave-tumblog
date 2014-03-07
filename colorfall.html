@@ -30,10 +30,19 @@
     <meta name="color:MainColor" content="#C85643"/>
 
     <!-- SECONDARY COLOR -->
-    <meta name="color:SecondaryColor" content="00929F" />
+    <meta name="color:SecondaryColor" content="#00929F" />
+    
+    <!-- TITLE COLOR -->
+    <meta name="color:TitleColor" content="#444" />
 
     <!-- TEXT COLOR -->
     <meta name="color:TextColor" content="#333" />
+    
+    <!-- LINK COLOR -->
+    <meta name="color:LinkColor" content="#02919E" />
+    
+    <!-- LINK HOVER COLOR -->
+    <meta name="color:LinkHoverColor" content="#74cbc8" />
 
     <!-- Social -->
     <meta name="text:Twitter Username" content=""/>
@@ -57,8 +66,8 @@
         h2{font-size:32px;}
         h2,h3,h4{line-height:28px;margin-bottom:33px;}
         p{font-size:16px;line-height:24px;margin:0 0 35px;}
-        a{color:{color:TextColor};text-decoration:none;}
-        a:hover{color:{color:SecondaryColor};text-decoration:none;}
+        a{color:{color:LinkColor};text-decoration:none;}
+        a:hover{color:{color:LinkHoverColor};text-decoration:none;}
         .author{
             margin: 10px auto;
             padding-top: 20px;
@@ -105,7 +114,8 @@
         }
         body{color:#4f555b;margin:40px 0; background-color: #E6E6E6;}
         body header #portrait{-moz-border-radius:128px;-webkit-border-radius:128px;border-radius:128px;display:block;margin:0 auto 20px;}
-        body header #logo{font-family:Open Sans, Sans-Serif;margin-bottom:20px;}
+        body header #logo{font-family:Open Sans, Sans-Serif;margin-bottom:20px;color:{color:TitleColor};}
+        body header #logo a{font-family:Open Sans, Sans-Serif;margin-bottom:20px;color:#444;}
         body header .description{margin:0 0 15px;text-align:center;}
         body header #nav{list-style:none;margin:0;padding:0;}
         body header #nav li{display:block;margin:0 0 10px;}
