@@ -27,6 +27,7 @@ Most of this work was done in short bursts over the course of ~1 month. Styling 
 - Display most recent tweet from @WaveHQ in the left nav
 - Opening up "Asks" to developers and designers in the startup community
 - Adding some sort of commenting functionality
+- Once we have more than a few blog posts, the home page will showcase blurbs of all the posts and read more links
 
 ## Thanks
 
