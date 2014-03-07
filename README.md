@@ -30,4 +30,4 @@ Most of this work was done in short bursts over the course of ~1 month. Styling 
 
 ## Thanks
 
-Props to [@dlimeb](https://github.com/dlimeb) for styling tips, [@prmack](https://github.com/prmack) for the tumblr theme inspiration, and [@katietkh](https://github.com/katietkh) for pushing me to get this done.
+Props to [@dlimeb](https://github.com/dlimeb) for styling tips, [@prmack](https://github.com/prmack) for the tumblr theme inspiration, [@soemarko](https://github.com/soemarko) for the embedgists.js and [@katietkh](https://github.com/katietkh) for pushing me to get this done.
