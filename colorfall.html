@@ -117,6 +117,9 @@
             float: left;
             font-family: "Open Sans";
         }
+        .dsq-comment-count {
+            color: #4f555b;
+        }
         body{color:#4f555b;margin:40px 0; background-color: #E6E6E6;}
         body header #portrait{-moz-border-radius:128px;-webkit-border-radius:128px;border-radius:128px;display:block;margin:0 auto 20px;}
         body header #logo{font-family:Open Sans, Sans-Serif;margin-bottom:20px;color:{color:TitleColor};}
@@ -276,7 +279,11 @@
                                     <li>{LikeButton color="grey" size="14"}</li>
                             </ul>
                             <div class="date">
-                                    <p>{TimeAgo}</p>
+                                    <p>{TimeAgo}
+                                        {block:IfDisqusShortname}
+                                        | <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                                        {/block:IfDisqusShortname}
+                                    </p>
                             </div>
                             {block:Date}
                             {/block:Date}
