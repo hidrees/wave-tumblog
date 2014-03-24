@@ -29,6 +29,9 @@ Most of this work was done in short bursts over the course of ~1 month. Styling 
 - Adding some sort of commenting functionality
 - Once we have more than a few blog posts, the home page will showcase blurbs of all the posts and read more links
 
+## DONE
+- Adding some sort of commenting functionality: we have disqus commenting on Permalink pages now.
+
 ## Thanks
 
 Props to [@dlimeb](https://github.com/dlimeb) for styling tips, [@prmack](https://github.com/prmack) for the tumblr theme inspiration, [@soemarko](https://github.com/soemarko) for embedgists.js, [@nduthoit](https://github.com/nduthoit) for setting up the engineering blog subdomain, and [@katietkh](https://github.com/katietkh) for pushing me to get this done.
