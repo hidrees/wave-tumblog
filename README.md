@@ -22,11 +22,12 @@ Tumblog theme for Waveapps engineering blog
 
 ## TODO
 Most of this work was done in short bursts over the course of ~1 month. Styling changes will likely happen every now and then, but some major features that need to be added:
+- Rewire the navigation panel to better readability of posts i.e., move nav to top/right rather than prominent left-hand side
+- Adding sharing on Twitter/Facebook on Permalink pages
 - Related posts on Permalink pages
 - A better way of handling adding author details that is not via HTML on posts
 - Display most recent tweet from @WaveHQ in the left nav
 - Opening up "Asks" to developers and designers in the startup community
-- Adding some sort of commenting functionality
 - Once we have more than a few blog posts, the home page will showcase blurbs of all the posts and read more links
 
 ## DONE
