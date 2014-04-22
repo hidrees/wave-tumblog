@@ -1,6 +1,6 @@
 # wave-tumblog
 
-Tumblog theme for Waveapps engineering blog
+Tumblog theme for Waveapps engineering blog, which lives at [engineering.waveapps.com](engineering.waveapps.com)
 
 
 ## Instructions
